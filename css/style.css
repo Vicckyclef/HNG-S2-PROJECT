@@ -73,6 +73,13 @@ header{
     background-color: var(--primaryBase);
     color: var(--white);
 }
+.nav-icons{
+    margin-right: 5rem;
+}
+.nav-icons i {
+    margin-left: .7rem;
+    cursor: pointer;
+}
 .nav-icons a {
     margin-right: 15px;
     color: var(--textColor);
@@ -233,6 +240,18 @@ header{
     text-align: center;
     margin-top: 10rem;
 }
+.Check-out{
+    background-color: var(--primaryBase);
+    color: var(--textColor);
+    font-weight: 700;
+    border: 1px solid var(--textColor);
+    padding: 15px;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: var(--boxShadow);
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
 @media (min-width: 1200px) {
     .col-xl-5th {
         flex: 0 0 20%;
@@ -240,3 +259,17 @@ header{
     }
 }
 /* End Section-2 */
+
+/* Start Footer */
+footer{
+    background: var(--primary-10);
+}
+.navigation{
+    float: right;
+}
+.navigation a{
+    text-decoration: none;
+    color: var(--textColor);
+    line-height: 2rem;
+}
+/* End Footer */
