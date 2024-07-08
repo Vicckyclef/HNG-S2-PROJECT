@@ -10,7 +10,7 @@ body{
     background-image: url(../img/section1/Bubble\ Break.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center 350px;
+    background-position: center 400px;
 }
 :root {
     --primaryBase: #FFB6C1;
@@ -122,10 +122,11 @@ header{
     margin-top: -5rem;
 }
 
-.title-wrapper{
+.title-wrapper {
     margin-left: -80rem;
     margin-top: -2rem;
 }
+
 .s1-bg {
     display: none;
     width: 200%;
@@ -134,7 +135,8 @@ header{
     left: 0;
     z-index: -1;
 }
-.s1-bg2{
+
+.s1-bg2 {
     width: 150%;
     height: 50vh;
     background-color: var(--primary-10);
@@ -158,20 +160,24 @@ header{
     color: var(--textColor);
 }
 
-.s1-products{
+.s1-products {
     color: var(--textColor);
     text-align: left;
 }
-.s1-products > img{
+
+.s1-products > img {
     margin-bottom: 1rem;
 }
-.s1-products > h4, span{
+
+.s1-products > h4, span {
     font-family: var(--calesta);
 }
-.s1-products > span{
+
+.s1-products > span {
     color: var(--black-40);
 }
-.s1-products > button{
+
+.s1-products > button {
     background-color: var(--primaryBase);
     color: var(--textColor);
     font-weight: 700;
@@ -179,9 +185,10 @@ header{
     padding: 15px;
     border-radius: 2rem;
     cursor: pointer;
+    white-space: nowrap;
 }
 
-.button{
+.button {
     font-weight: 700;
     margin-top: -1rem;
     background: var(--primaryBase);
@@ -190,6 +197,50 @@ header{
     border-radius: 2rem;
     box-shadow: var(--boxShadow);
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .s1-title {
+        margin-top: 3rem;
+    }
+    
+    .title-wrapper {
+        margin-left: 0;
+    }
+    
+    .s1-products {
+        text-align: center;
+    }
+    
+    .s1-products > h4 {
+        font-size: 1.5rem;
+    }
+    
+    .s1-products .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .s1-products .d-flex p,
+    .s1-products .d-flex button,
+    .s1-products .d-flex span {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Horizontal Scrolling Carousel */
+.product-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.product-carousel .s1-products {
+    scroll-snap-align: center;
+    flex: 0 0 80%;
+    margin-right:
+}
+
 /* End Section-1 */
 
 /* Start Section-2 */
@@ -383,6 +434,8 @@ footer{
     border-radius: 10px;
     padding: 20px;
     width: 500px;
+    height: 500px;
+    overflow-y: scroll;
     max-width: 90%;
     position: relative;
     z-index: 999;
