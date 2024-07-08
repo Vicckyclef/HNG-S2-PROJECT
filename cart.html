@@ -4,62 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skin Hub - Body Moisturizer</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
-      background-color: #f9e7eb;
-      font-family: Arial, sans-serif;
+        margin: 0; 
+        padding: 0;
     }
-    .navbar {
-      background-color: #ffffff;
-      border-bottom: 1px solid #ddd;
+    .navbar-custom {
+        background-color: inherit; 
+        box-shadow: none;
+        margin: 0 auto;
+        padding: 10px;
     }
-    .product-title {
-      font-size: 1.5rem;
-      font-weight: bold;
+    .nav-link-custom {
+        color: #343a40; /* Text color */
     }
-    .product-price {
-      font-size: 1.25rem;
-      color: #ff6f61;
+    .navbar-brand-custom {
+        font-weight: bold;
+        color: #343a40;
     }
-    .related-products img {
-      width: 100%;
+    .navbar-brand-custom span {
+        color: #e83e8c; /* Different color for "Hub" */
     }
-    .footer {
-      background-color: #f1a2a2;
-      padding: 20px;
-      text-align: center;
-      border-top: 1px solid #ddd;
+    .nav-icons i {
+        margin-right: 15px;
+        color: #343a40;
     }
-  </style>
+    .btn-custom {
+        background-color: #e83e8c;
+        color: white;
+    }
+    .nav-categories {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
+        border-bottom: 3px solid gray
+    }
+    .nav-categories a {
+        color: #343a40;
+        text-decoration: none;
+    }
+</style>
+</head>
 </head>
 <body>
+  <div class="nav-head">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link-custom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Product 1</a>
+                        <a class="dropdown-item" href="#">Product 2</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom" href="#">Contacts</a>
+                </li>
+            </ul>
+            <a class="navbar-brand mx-auto navbar-brand-custom" href="#">Skin <span>Hub</span></a>
+            <div class="ml-auto d-flex align-items-center">
+                <div class="nav-icons">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-categories">
+      <a href="#">Body Care</a>
+      <a href="#">Face Care</a>
+      <a href="#">Private Hygiene</a>
+      <a href="#">Scents</a>
+  </div>
+</div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">Skin <span class="text-warning">Hub</span></a>
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacts</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+
 
   <!-- Product Section -->
-  <div class="container my-3 mx-5">
+  <div class="container my-5">
     <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="col-lg-4 col-md-6 col-sm-12">
         <img src="./cart/perf.png" class="img-fluid" alt="Medix 5.5 Body Moisturizer">
         <div class="related-products mt-4">
           <h5>Related Products</h5>
@@ -75,82 +113,89 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-sm-12 cos-lg-8">
+      <div class="col-lg-8 col-md-6 col-sm-12">
         <h2 class="product-title">MEDIX 5.5 Body Moisturizer</h2>
-        <p>Glycolic and Lactic Acid Body Moisturizer</p>
+        <p class="subtitle">Glycolic and Lactic Acid Body Moisturizer</p>
         <p class="product-price">#15,000</p>
-        <p>Medix 5.5 Glycolic and Lactic Acid Body Moisturizer is dermatologist-tested and formulated to provide maximum benefits without compromising on gentleness. Perfect for all skin types, it’s your go-to solution for achieving healthier, glowing skin.</p>
+        <p class="product-description">Medix 5.5 Glycolic and Lactic Acid Body Moisturizer is dermatologist-tested and formulated to provide maximum benefits without compromising on gentleness. Perfect for all skin types, it’s your go-to solution for achieving healthier, glowing skin.</p>
         <ul>
           <li>Exfoliation: Glycolic acid gently removes dead skin cells, promoting cell turnover and revealing fresher, smoother skin.</li>
           <li>Hydration: Lactic acid hydrates and softens the skin, improving texture and tone.</li>
           <li>pH Balanced: Formulated with a pH of 5.5 to maintain your skin’s natural barrier and prevent irritation.</li>
           <li>Anti-Aging: Reduces the appearance of fine lines, wrinkles, and hyperpigmentation for a more youthful look.</li>
         </ul>
-        <div class="d-flex">
-          <input type="number" class="form-control w-25 mr-3" value="1">
-          <button class="btn btn-primary">Add to Cart</button>
-          <button class="btn btn-secondary ml-3">Save for Later</button>
+        <div class="d-flex align-items-center gap-5">
+          <div class="d-flex">
+            <button class="btn btn-outline-secondary" id="decrease-quantity">-</button>
+            <input type="number" class="form-control mx-2 text-center" value="1" id="quantity-input" style="width: 60px;">
+            <button class="btn btn-outline-secondary" id="increase-quantity">+</button>
+          </div>
+          <button class="btn btn-primary ml-3 mt-2">Add to Cart</button>
+          <div id="overlay" class="overlay">
+            <div class="overlay-bg"></div>
+            <div class="overlay-content">
+                <span class="close-btn">&times;</span>
+                <h5 class="text-center">Product added to cart successfully!</h5>
+                <p class="text-center text-danger">Please sign in for proper tracking of your products</p>
+                <div class="text-center">
+                    <img src="./cart/perf.png" alt="Product Image">
+                </div>
+                <h5 class="text-center">MEDIX 5.5 Body Moisturizer</h5>
+                <p class="text-center">Glycolic and Lactic Acid Body Moisturizer</p>
+                <div class="text-center">
+                    <button class="btn btn-custom-outline">-</button>
+                    <span>1</span>
+                    <button class="btn btn-custom-outline">+</button>
+                </div>
+                <h5 class="text-center">Subtotal: #15,000</h5>
+                <div class="d-flex justify-content-between mt-4">
+                    <button class="btn btn-custom-outline">Continue shopping</button>
+                    <button class="btn btn-custom">Proceed to check out</button>
+                </div>
+            </div>
         </div>
-
-        <div class="bg-secondary mt-5 rounded end p-2">
-            <p>Additional Information</p> <hr/>
-            <p>Reviews</p><hr/>
+          <button class="btn btn-secondary ml-3 mt-2">Save for Later</button>
+        </div>
+  
+        <div class="additional-info mt-5">
+          <p class="additional-info-title">Additional Information</p>
+          <hr>
+          <p class="reviews-title">Reviews</p>
+          <hr>
         </div>
       </div>
     </div>
-  </div>
-
+  </div> 
+  
+  
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h6>Skin <span class="text-muted">Hub</span></h6>
-                <p>Your one-stop shop for glowy skin</p>
-                <p><i class="bi bi-geo-alt-fill"></i> Jay Avenue, Lagos, Nigeria</p>
+    <div class="container py-5">
+        <div class="d-flex justify-content-between">
+            <div class="footer-wrapper">
+                <a class="navbar-brand mx-auto navbar-brand-custom" href="#">Skin <span>Hub</span></a>
+                <h5>Your one stop shop for glowy skin</h5>
+                <div class="d-flex">
+                    <i class="fa fa-map-marker my-1" aria-hidden="true"></i>
+                    <p class="mx-3">Jay Avenue Nigeria</p>
+                </div>                
             </div>
-            <div class="col-12 mt-3">
-                <nav class="nav justify-content-center">
-                    <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">Products</a>
-                    <a class="nav-link" href="#">Contacts</a>
-                </nav>
-            </div>
-            <div class="col-12 mt-3">
-                <p>&copy; Skin Hub 2024</p>
+            <div class="navigation text-center">
+                <a href="#">Home</a> <br>
+                <a href="#">Products</a> <br>
+                <a href="#">Contacts</a>
             </div>
         </div>
+        <hr>
+        <div class="d-flex">
+            <i class="fa fa-copyright my-1" aria-hidden="true"></i>
+            <a class="navbar-brand navbar-brand-custom mx-3" href="#">Skin <span>Hub</span></a>
+        </div>
     </div>
-</footer>
-
+  </footer>
+  <script src="./js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <section class="container">
-        <div class="row">
-            <div class="col-">
-                <img src="" alt="">
-                <h4>Hello World</h4>
-            </div>
-            <div class="col col-sm-4 col-md-3 col-lg-2">
-                <img src="" alt="">
-
-        </div>
-    </section>
-</body>
-</html> -->
