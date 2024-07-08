@@ -30,10 +30,9 @@ const buttons = document.querySelectorAll('.add-to-cart');
     });
   });
   
-
   document.querySelector('.btn-primary').onclick = function() {
-    document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('overlay-bg').style.display = 'flex';
 }
 document.querySelector('.close-btn').onclick = function() {
-    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('overlay-bg').style.display = 'none';
 }
