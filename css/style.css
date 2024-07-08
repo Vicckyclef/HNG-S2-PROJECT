@@ -120,6 +120,7 @@ header{
     padding: 20px;
     text-align: center;
     margin-top: -5rem;
+    overflow-x: hidden;
 }
 
 .title-wrapper {
@@ -235,10 +236,14 @@ header{
     scroll-snap-type: x mandatory;
 }
 
+.product-carousel::-webkit-scrollbar {
+    display: none; 
+}
+
 .product-carousel .s1-products {
     scroll-snap-align: center;
     flex: 0 0 80%;
-    margin-right:
+    margin-right: 2rem;
 }
 
 /* End Section-1 */
