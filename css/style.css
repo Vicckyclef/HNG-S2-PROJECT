@@ -120,7 +120,7 @@ header{
     padding: 20px;
     text-align: center;
     margin-top: -5rem;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .title-wrapper {
@@ -171,6 +171,7 @@ header{
 }
 
 .s1-products > h4, span {
+    
     font-family: var(--calesta);
 }
 
