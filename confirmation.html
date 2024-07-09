@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+        margin: 0; 
+        padding: 0;
+        background-image: none;
+    }
+    .navbar-custom {
+        background-color: inherit; 
+        box-shadow: none;
+        margin: auto;
+        padding: 10px;
+    }
+    .nav-link-custom {
+        color: #343a40; /* Text color */
+    }
+    .navbar-brand-custom {
+        font-weight: bold;
+        color: #343a40;
+    }
+    .navbar-brand-custom span {
+        color: #e83e8c; /* Different color for "Hub" */
+    }
+    .nav-icons i {
+        margin-right: 15px;
+        color: #343a40;
+    }
+    .btn-custom {
+        background-color: #e83e8c;
+        color: white;
+    }
+    .nav-categories {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
+        border-bottom: 3px solid gray;
+        margin-top: -.5rem;
+    }
+    .nav-categories a {
+        color: #343a40;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+  <div class="nav-head">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link-custom" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Product 1</a>
+                        <a class="dropdown-item" href="#">Product 2</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-custom" href="#">Contacts</a>
+                </li>
+            </ul>
+            <a class="navbar-brand mx-auto navbar-brand-custom" href="#">Skin <span>Hub</span></a>
+            <div class="ml-auto d-flex align-items-center">
+                <div class="nav-icons">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-categories">
+      <a href="#">Body Care</a>
+      <a href="#">Face Care</a>
+      <a href="#">Private Hygiene</a>
+      <a href="#">Scents</a>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="mb-4">Delivery Information</h2>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="phone">Phone Number</label>
+        <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="state">Select State</label>
+        <select id="state" class="form-control">
+          <option selected>Choose...</option>
+          <!-- Add options for states -->
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="city">Select City</label>
+        <select id="city" class="form-control">
+          <option selected>Choose...</option>
+          <!-- Add options for cities -->
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+    </div>
+    <div class="form-group">
+      <label for="order-info">Order Information</label>
+      <input type="text" class="form-control" id="order-info" placeholder="Please include any other details about your delivery">
+    </div>
+  </form>
+
+  <h2 class="mb-4">Order Summary</h2>
+  <div class="order-summary">
+    <div class="d-flex justify-content-between">
+      <p>SubTotal</p>
+      <p>#15,000</p>
+    </div>
+    <div class="d-flex justify-content-between">
+      <p>Shipping Fee</p>
+      <p>Enter your address to view shipping details</p>
+    </div>
+    <div class="d-flex justify-content-between">
+      <p>Total</p>
+      <p>#15,000</p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-custom btn-block mt-4">Confirm Order</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

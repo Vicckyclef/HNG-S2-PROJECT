@@ -16,7 +16,7 @@
     .navbar-custom {
         background-color: inherit; 
         box-shadow: none;
-        margin: 0 auto;
+        margin: auto;
         padding: 10px;
     }
     .nav-link-custom {
@@ -48,7 +48,6 @@
         text-decoration: none;
     }
 </style>
-</head>
 </head>
 <body>
   <div class="nav-head">
@@ -125,13 +124,15 @@
           <li>pH Balanced: Formulated with a pH of 5.5 to maintain your skin’s natural barrier and prevent irritation.</li>
           <li>Anti-Aging: Reduces the appearance of fine lines, wrinkles, and hyperpigmentation for a more youthful look.</li>
         </ul>
-        <div class="d-flex align-items-center gap-5">
+        <div class="d-flex align-items-center gap-4 col-lg-12 col-md-6 col-sm-12">
           <div class="d-flex quan">
-            <button class="btn minus" id="decrease-quantity">-</button>
-            <input type="number" class="form-control value mx-2 text-center" value="1" id="quantity-input" style="width: 60px; background-color: inherit; border: none;">
-            <button class="btn plus" id="increase-quantity">+</button>
+              <button class="btn minus" id="decrease-quantity">-</button>
+              <input type="number" class="form-control value mx-2 text-center" value="1" id="quantity-input" style="width: 60px; background-color: inherit; border: none;">
+              <button class="btn plus" id="increase-quantity">+</button>
           </div>
           <button class="btn add ml-3 mt-2">Add to Cart</button>
+          <button class="btn save ml-3 mt-2">Save for Later</button>
+      </div>      
           <div id="overlay-bg" class="overlay-bg">
             <div id="overlay" class="overlay">
                 <span class="close-btn">&times;</span>
@@ -159,15 +160,18 @@
                   <p>Subtotal</p>
                   <p>#15,000</p>
                 </div>
-                <div class="d-flex justify-content-between mt-4">
+                <div class="order-summary">
+                  <p>Order Summary</p>
+                  <img class="dropdown-icon" src="./img/image.png" alt="dropdown-icon">                    
+                </div>
+                <div class="d-flex justify-content-between mt-5">
                   <button class="btn btn-custom-outline">Continue shopping</button>
-                  <button class="btn btn-custom">Proceed to check out</button>
+                  <a href="./confirmation.html" class="btn btn-custom">Proceed to check out</a>
               </div>
             </div>
         </div>
-          <button class="btn save ml-3 mt-2">Save for Later</button>
+          
         </div>
-  
         <div class="additional-info mt-5">
           <p class="additional-info-title">Additional Information</p>
           <hr>

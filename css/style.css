@@ -440,17 +440,19 @@ footer{
   .save{
     border: 2px solid var(--primaryBase);
     border-radius: 3rem;
-    padding: .9rem 4rem;
+    padding: .9rem 3rem;
     font-weight: 700;
+    text-wrap: nowrap;
   }
   .add{
     border-radius: 3rem;
     border: 2px solid var(--primary-40);
     background-color: var(--primaryBase);
     color: var(--textColor);
-    padding: .9rem 6rem;
+    padding: .9rem 5rem;
     font-weight: 700;
     box-shadow: var(--boxShadow);
+    text-wrap: nowrap;
   }
   .minus{
     border-right: 1px solid var(--textColor);
@@ -471,8 +473,13 @@ footer{
     background-color: #FBEEF0;
     border: 2px solid var(--primary-40);
     border-radius: 2rem;
-    padding: .3rem 1rem;
+    padding: .5rem 1rem;
+    margin-top: .9rem;
   }
+  .d-flex.quan button,
+.d-flex.quan input {
+    flex-shrink: 0; 
+}
 
   .overlay-bg {
     position: fixed;
@@ -489,22 +496,23 @@ footer{
 .overlay {
     background: #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 1.5rem;
     width: 500px;
     height: 500px;
     overflow-y: scroll;
     max-width: 90%;
     position: relative;
     z-index: 999;
+    padding-top: 3.5rem;
 }
 .overlay-content img {
     max-width: 100%;
 }
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+    top: 0px;
+    right: 5px;
+    font-size: 50px;
     cursor: pointer;
 }
 .cart-total{
@@ -525,14 +533,38 @@ footer{
     justify-content: space-between;
     font-weight: 700;
 }
+.order-summary{
+    margin-top: 1rem;
+    background: rgba(255, 182, 193, 0.00);
+    display: flex;
+    padding: 10px 16px;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    justify-content: space-between;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.dropdown-icon{
+    width: 1.5rem;
+}
 .btn-custom {
-    background-color: #e83e8c;
-    color: white;
+    font-size: 1rem;
+    background-color: var(--primaryBase);
+    color: var(--textColor);
+    font-weight: 700;
+    border-radius: 3rem;
+    padding: 8px 28px;
+    border: 2px solid var(--primary-40);
 }
 .btn-custom-outline {
+    font-size: 1rem;
     background: transparent;
-    border: 1px solid #e83e8c;
-    color: #e83e8c;
+    border: 2px solid var(--primary-40);
+    color: var(--primary-40);
+    font-weight: 700;
+    border-radius: 3rem;
+    padding: 8px 28px;
 }
   
   .btn-outline-secondary {
@@ -551,3 +583,25 @@ footer{
     -webkit-appearance: none;
     margin: 0;
   }
+
+
+.d-flex.align-items-center {
+    flex-wrap: wrap; 
+}
+
+
+@media (max-width: 768px) {
+    .d-flex.align-items-center {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    .ml-3, .mt-2 {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .d-flex.quan {
+        margin-bottom: 1rem; 
+    }
+}
