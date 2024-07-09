@@ -30,7 +30,7 @@ const buttons = document.querySelectorAll('.add-to-cart');
     });
   });
   
-  document.querySelector('.btn-primary').onclick = function() {
+  document.querySelector('.add').onclick = function() {
     document.getElementById('overlay-bg').style.display = 'flex';
 }
 document.querySelector('.close-btn').onclick = function() {

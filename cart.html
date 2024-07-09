@@ -11,6 +11,7 @@
     body {
         margin: 0; 
         padding: 0;
+        background-image: none;
     }
     .navbar-custom {
         background-color: inherit; 
@@ -125,35 +126,46 @@
           <li>Anti-Aging: Reduces the appearance of fine lines, wrinkles, and hyperpigmentation for a more youthful look.</li>
         </ul>
         <div class="d-flex align-items-center gap-5">
-          <div class="d-flex">
-            <button class="btn btn-outline-secondary" id="decrease-quantity">-</button>
-            <input type="number" class="form-control mx-2 text-center" value="1" id="quantity-input" style="width: 60px;">
-            <button class="btn btn-outline-secondary" id="increase-quantity">+</button>
+          <div class="d-flex quan">
+            <button class="btn minus" id="decrease-quantity">-</button>
+            <input type="number" class="form-control value mx-2 text-center" value="1" id="quantity-input" style="width: 60px; background-color: inherit; border: none;">
+            <button class="btn plus" id="increase-quantity">+</button>
           </div>
-          <button class="btn btn-primary ml-3 mt-2">Add to Cart</button>
+          <button class="btn add ml-3 mt-2">Add to Cart</button>
           <div id="overlay-bg" class="overlay-bg">
             <div id="overlay" class="overlay">
                 <span class="close-btn">&times;</span>
-                <h5 class="text-center">Product added to cart successfully!</h5>
-                <p class="text-center text-danger">Please sign in for proper tracking of your products</p>
-                <div class="text-center">
+                <h5 class="text-center" style="font-size: small;">Product added to cart successfully!</h5>
+                <p class="text-center text-danger" style="font-weight: 700;">Please sign in for proper tracking of your products</p>
+                <div class="row">
+                  <div class="text-left col-sm-12 col-md-6 col-lg-4">
                     <img src="./cart/perf.png" alt="Product Image">
                 </div>
-                <h5 class="text-center">MEDIX 5.5 Body Moisturizer</h5>
-                <p class="text-center">Glycolic and Lactic Acid Body Moisturizer</p>
-                <div class="text-center">
-                    <button class="btn btn-custom-outline">-</button>
-                    <span>1</span>
-                    <button class="btn btn-custom-outline">+</button>
+                <div class="col-sm-12 col-md-6 col-lg-8">
+                  <h5 class="text-left" style="font-family: var(--calesta);">MEDIX 5.5 Body Moisturizer</h5>
+                <p class="text-left" style="font-size: small;">Glycolic and Lactic Acid Body Moisturizer</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex quan" style="padding: 0;">
+                    <button class="btn minus" id="decrease-quantity" style="font-size: smaller;">-</button>
+                    <input type="number" class="form-control value mx-2 text-center" value="1" id="quantity-input" style="width: 40px; font-size: smaller; background-color: inherit; border: none;">
+                    <button class="btn plus" id="increase-quantity" style="font-size: smaller;">+</button>
+                  </div>
+                <h6 class="text-center">Subtotal: #15,000</h6>                
                 </div>
-                <h5 class="text-center">Subtotal: #15,000</h5>
+                </div>
+                </div>
+                <p class="cart-total">Cart Total</p>
+                <div class="sub-total">
+                  <p>Subtotal</p>
+                  <p>#15,000</p>
+                </div>
                 <div class="d-flex justify-content-between mt-4">
-                    <button class="btn btn-custom-outline">Continue shopping</button>
-                    <button class="btn btn-custom">Proceed to check out</button>
-                </div>
+                  <button class="btn btn-custom-outline">Continue shopping</button>
+                  <button class="btn btn-custom">Proceed to check out</button>
+              </div>
             </div>
         </div>
-          <button class="btn btn-secondary ml-3 mt-2">Save for Later</button>
+          <button class="btn save ml-3 mt-2">Save for Later</button>
         </div>
   
         <div class="additional-info mt-5">

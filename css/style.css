@@ -170,8 +170,7 @@ header{
     margin-bottom: 1rem;
 }
 
-.s1-products > h4, span {
-    
+.s1-products > h4, span {    
     font-family: var(--calesta);
 }
 
@@ -192,16 +191,31 @@ header{
 
 .button {
     font-weight: 700;
-    margin-top: -1rem;
+    margin-top: -0.7rem;
     background: var(--primaryBase);
     color: var(--textColor);
     border: 1px solid var(--primary-40);
     border-radius: 2rem;
     box-shadow: var(--boxShadow);
+    height: 3rem;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+    .button {
+        font-size: small;
+        text-wrap: nowrap;
+    }
+    .price {
+        font-size: 1rem; 
+    }
+    .s1-products .d-flex p,
+    .s1-products .d-flex button,
+    .s1-products .d-flex span {
+        margin-left: -.5rem;
+    }
+}
 /* Responsive Adjustments */
-@media (max-width: <= 768px) {
+@media (max-width: < 768px) {
     .s1-title {
         margin-top: 3rem;
     }
@@ -244,7 +258,7 @@ header{
 .product-carousel .s1-products {
     scroll-snap-align: center;
     flex: 0 0 80%;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
 }
 
 /* End Section-1 */
@@ -423,6 +437,43 @@ footer{
     margin: 0.5rem 0;
   }
 
+  .save{
+    border: 2px solid var(--primaryBase);
+    border-radius: 3rem;
+    padding: .9rem 4rem;
+    font-weight: 700;
+  }
+  .add{
+    border-radius: 3rem;
+    border: 2px solid var(--primary-40);
+    background-color: var(--primaryBase);
+    color: var(--textColor);
+    padding: .9rem 6rem;
+    font-weight: 700;
+    box-shadow: var(--boxShadow);
+  }
+  .minus{
+    border-right: 1px solid var(--textColor);
+    border-radius: 0;
+    font-weight: 700;
+    
+  }
+  .plus{
+    border-left: 1px solid var(--textColor);
+    border-radius: 0;
+    font-weight: 700;
+  }
+  .value{
+    background-color: none;
+    font-weight: 700;
+  }
+  .quan{
+    background-color: #FBEEF0;
+    border: 2px solid var(--primary-40);
+    border-radius: 2rem;
+    padding: .3rem 1rem;
+  }
+
   .overlay-bg {
     position: fixed;
     top: 0;
@@ -455,6 +506,24 @@ footer{
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+}
+.cart-total{
+    margin-top: 2rem;
+    color: var(--Text-Color, #332427);
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--textColor);
+}
+.sub-total{
+    display: flex;
+    padding: 10px 16px;
+    align-items: center;
+    font-size: 18px;
+    align-self: stretch;
+    background: rgba(255, 182, 193, 0.34);
+    justify-content: space-between;
+    font-weight: 700;
 }
 .btn-custom {
     background-color: #e83e8c;
